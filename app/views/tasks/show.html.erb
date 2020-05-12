@@ -1,11 +1,16 @@
 <h2><%= @task.title %></h2>
-<p><%= @task.details %></p>
+<div class="card">
+  <div class="card-body">
+    <p><%= @task.details %></p>
+  </div>
+</div>
+
 <p><%= @task.completed %></p>
 
 <hr>
 
-<%= link_to "Edit task!", edit_path(@task) %>
+<%= link_to "Edit task!", edit_path(@task), :class => "btn btn-primary" %>
 
 <hr>
 
-<%= link_to "Return to tasks list!", list_path %>
+<%= link_to "Return to tasks list!", list_path, :class => "btn btn-primary" %>
